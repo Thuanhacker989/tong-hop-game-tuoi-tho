@@ -3,110 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trạm Giả Lập & CFW | エミュレータ＆カスタムファームウェア</title>
+    <title>Trạm Giả Lập & CFW | エミュレータ＆CFWステーション</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 15px; background-color: #0f172a; color: #f8fafc; }
+        :root {
+            --sony-blue: #003791;
+            --nintendo-red: #e60012;
+            --gold: #fbbf24;
+        }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            padding: 15px; 
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.alphacoders.com/131/1312384.jpeg'); /* Ảnh tổng hợp nhân vật */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #f8fafc; 
+        }
         .container { max-width: 850px; margin: auto; }
-        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; margin-bottom: 5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 1.8em; }
-        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 30px; font-size: 0.85em; }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        h1 { color: #38bdf8; text-transform: uppercase; margin: 0; font-size: 1.8em; }
+        .jp-text { font-size: 0.6em; display: block; color: #94a3b8; }
         
-        .platform-card { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 25px; border: 1px solid #334155; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-        h2 { color: #f43f5e; margin-top: 0; font-size: 1.3em; border-bottom: 1px solid #334155; padding-bottom: 10px; display: flex; flex-direction: column; }
-        h2 span { font-size: 0.6em; color: #94a3b8; text-transform: uppercase; margin-top: 2px; }
+        .platform-card { 
+            background: rgba(30, 41, 59, 0.9); 
+            backdrop-filter: blur(5px);
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 25px; 
+            border: 1px solid rgba(51, 65, 85, 0.5); 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+        h2 { border-bottom: 2px solid #334155; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .sony-title { color: #60a5fa; }
+        .nintendo-title { color: #f87171; }
+        
+        .lang-box { font-size: 0.75em; color: #94a3b8; margin-bottom: 5px; font-style: italic; }
+        .link-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .btn { flex: 1; min-width: 160px; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85em; transition: 0.3s; color: #fff; border: 1px solid rgba(255,255,255,0.1); }
+        
+        .btn-emu { background-color: #0369a1; } 
+        .btn-bios { background-color: #7e22ce; } 
+        .btn-rom { background-color: #15803d; } 
+        .btn-cfw { background-color: #92400e; border-color: var(--gold); }
+        .btn-release { background-color: #475569; }
 
-        .cfw-section { border-left: 5px solid #fbbf24; padding-left: 15px; margin-top: 15px; background: rgba(251, 191, 36, 0.05); padding: 10px 15px; border-radius: 0 8px 8px 0; }
-        .cfw-title { color: #fbbf24; font-weight: bold; margin-bottom: 10px; display: block; font-size: 0.85em; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.4); filter: brightness(1.2); }
+        .footer { text-align: center; margin-top: 50px; padding: 20px; color: #cbd5e1; font-size: 0.8em; background: rgba(15, 23, 42, 0.9); border-radius: 10px; }
         
-        .link-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .btn { flex: 1; min-width: 160px; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.8em; transition: 0.2s; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .btn small { font-size: 0.7em; font-weight: normal; opacity: 0.8; margin-top: 2px; }
-        
-        /* Phân loại màu nút */
-        .btn-emu { background-color: #0369a1; } /* Emulator */
-        .btn-bios { background-color: #7e22ce; } /* BIOS */
-        .btn-rom { background-color: #15803d; } /* ROMs */
-        .btn-cfw { background-color: #92400e; border: 1px solid #fbbf24; }
-        .btn-release { background-color: #475569; border: 1px solid #94a3b8; }
-
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-        .footer { text-align: center; margin-top: 40px; padding: 20px; color: #64748b; font-size: 0.75em; border-top: 1px solid #334155; }
-        .tag-info { display: inline-block; background: #334155; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin-bottom: 10px; color: #38bdf8; }
+        /* Music Widget */
+        .music-player { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 50px; border: 1px solid var(--gold); }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>🎮 TRẠM GIẢ LẬP & CFW</h1>
-    <p class="subtitle">Dự án: Tổng hợp game tuổi thơ (by Thuanhacker989) | 少年時代のゲーム集</p>
+<!-- Nhạc nền: Super Mario Bros Movie Theme -->
+<div class="music-player">
+    <iframe width="100" height="25" src="https://www.youtube.com/embed/EAnS_v-hD0s?autoplay=1&loop=1&playlist=EAnS_v-hD0s" frameborder="0" allow="autoplay"></iframe>
+</div>
 
-    <!-- SONY BOX -->
-    <div class="platform-card">
-        <h2>🕹️ Sony PlayStation<span>ソニー プレイステーション (PS1, PS2, PSP)</span></h2>
+<div class="container">
+    <div class="glass-header">
+        <h1>🎮 TRẠM GIẢ LẬP & CFW</h1>
+        <span class="jp-text">エミュレータ＆カスタムファームウェア・ステーション</span>
+        <p style="font-size: 0.9em; color: #cbd5e1;">By Thuanhacker989 | Thuận Nguyễn</p>
+    </div>
+
+    <!-- SONY SECTION (Gộp PS1, PS2, PSP) -->
+    <div class="platform-card" style="border-left: 6px solid var(--sony-blue);">
+        <h2 class="sony-title">🟦 SONY PLAYSTATION (ソニー)</h2>
+        <div class="lang-box">Giả lập, BIOS và ROM cho PS1, PS2, PSP / エミュレータ、BIOS、ROM</div>
         <div class="link-group">
-            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn btn-emu">DuckStation (PS1)<small>PS1エミュレータ</small></a>
-            <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn btn-emu">NetherSX2 (PS2)<small>PS2エミュレータ</small></a>
-            <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn btn-emu">PPSSPP Gold (PSP)<small>PSPエミュレータ</small></a>
-            
-            <a href="https://www.emu-land.net/en/consoles/psx/bios" class="btn btn-bios">BIOS PS1<small>PS1バイオス</small></a>
-            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn btn-bios">BIOS PS2 All<small>PS2バイオス</small></a>
-            
-            <a href="https://romsfun.com/roms/playstation/" class="btn btn-rom">Kho ROM PS1<small>PS1ロム集</small></a>
-            <a href="https://romsfun.com/roms/playstation-2/" class="btn btn-rom">Kho ROM PS2<small>PS2ロム集</small></a>
-            <a href="https://romsfun.com/roms/playstation-portable/" class="btn btn-rom">Kho ROM PSP<small>PSPロム集</small></a>
+            <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn btn-emu">NetherSX2 (PS2)</a>
+            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn btn-emu">DuckStation (PS1)</a>
+            <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn btn-emu">PPSSPP Gold (PSP)</a>
+            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn btn-bios">Tải BIOS PS2 (All)</a>
+            <a href="https://www.emu-land.net/en/consoles/psx/bios" class="btn btn-bios">Tải BIOS PS1/PSX</a>
+            <a href="https://romsfun.com/roms/playstation-2/" class="btn btn-rom">ROM PS2</a>
+            <a href="https://romsfun.com/roms/playstation/" class="btn btn-rom">ROM PS1</a>
+            <a href="https://romsfun.com/roms/playstation-portable/" class="btn btn-rom">ROM PSP</a>
         </div>
     </div>
 
-    <!-- NINTENDO BOX -->
-    <div class="platform-card">
-        <h2>📐 Nintendo<span>任天堂 (3DS, DS, Switch, GameCube, GBA)</span></h2>
+    <!-- NINTENDO SECTION -->
+    <div class="platform-card" style="border-left: 6px solid var(--nintendo-red);">
+        <h2 class="nintendo-title">🟥 NINTENDO (任天堂)</h2>
+        <div class="lang-box">Switch, 3DS, DS, GameCube, GBA / スイッチ、3DS、DS、ゲームキューブ</div>
         <div class="link-group">
-            <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn btn-emu">Citra MMJ (3DS)<small>3DSエミュレータ</small></a>
-            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn btn-emu">DraStic (DS)<small>DSエミュレータ</small></a>
-            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn btn-emu">Dolphin (GC/Wii)<small>GCエミュレータ</small></a>
-            
-            <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn btn-rom">ROM 3DS<small>3DSロム集</small></a>
-            <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn btn-rom">ROM Switch<small>Switchロム集</small></a>
-            <a href="https://romsfun.com/roms/gamecube/" class="btn btn-rom">ROM GameCube<small>GCロム集</small></a>
-            <a href="https://romsfun.com/roms/game-boy-advance/" class="btn btn-rom">ROM GBA<small>GBAロム集</small></a>
+            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn btn-emu">Dolphin (GameCube/Wii)</a>
+            <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn btn-emu">Citra MMJ (3DS)</a>
+            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn btn-emu">DraStic (DS)</a>
+            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn btn-emu">Nestopia (NES)</a>
+            <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn btn-rom">ROM 3DS</a>
+            <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn btn-rom">ROM Switch</a>
+            <a href="https://romsfun.com/roms/gamecube/" class="btn btn-rom">ROM GameCube</a>
+            <a href="https://romsfun.com/roms/super-nintendo/" class="btn btn-rom">ROM NES/SNES</a>
+            <a href="https://romsfun.com/roms/game-boy-advance/" class="btn btn-rom">ROM GBA</a>
         </div>
         
-        <div class="cfw-section">
-            <span class="cfw-title">🛠️ Custom Firmware (Console Hack):</span>
+        <div style="background: rgba(251, 191, 36, 0.1); padding: 15px; border-radius: 8px; margin-top: 15px;">
+            <span style="color: var(--gold); font-weight: bold;">🛠️ Console CFW (Máy Thật):</span>
             <div class="link-group">
-                <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/Nintendo" class="btn btn-release">Nintendo Releases<small>カスタムファイル</small></a>
-                <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn btn-cfw">Luma3DS (3DS)<small>3DSハック</small></a>
-                <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn btn-cfw">Atmosphere (Switch)<small>Switchハック</small></a>
+                <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/Nintendo" class="btn btn-release">Nintendo Release Tag</a>
+                <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn btn-cfw">Luma3DS (3DS)</a>
+                <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn btn-cfw">Atmosphere (Switch)</a>
             </div>
         </div>
     </div>
 
-    <!-- ARCADE & RETRO BOX -->
+    <!-- ARCADE & MULTI SECTION -->
     <div class="platform-card">
-        <h2>📟 Arcade & Retro<span>アーケード & レトロ (MAME, NES, SNES)</span></h2>
+        <h2>📟 ARCADE & SYSTEM (アーケード)</h2>
+        <div class="lang-box">Game thùng và hệ thống hỗ trợ / アーケードとシステム</div>
         <div class="link-group">
-            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn btn-emu">MAME4droid<small>アーケード</small></a>
-            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn btn-emu">Nestopia (NES)<small>ファミコン</small></a>
-            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn btn-emu">RetroArch<small>レトロアーチ</small></a>
-            
-            <a href="https://romsfun.com/roms/nintendo/" class="btn btn-rom">ROM NES (4 nút)<small>FCロム集</small></a>
-            <a href="https://romsfun.com/roms/super-nintendo/" class="btn btn-rom">ROM SNES<small>SFCロム集</small></a>
-            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn btn-rom">Full MAME Set<small>MAMEロム集</small></a>
-        </div>
-    </div>
-
-    <!-- SUPPORT FILES -->
-    <div class="platform-card">
-        <h2>📁 Support & BIOS<span>サポート & バイオス</span></h2>
-        <div class="link-group">
-            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn btn-bios">File Fix AP (NDS)<small>NDS修正</small></a>
-            <a href="https://docs.google.com/file/d/0B7iKq77iChmyLXRtcUhvTmVhd28/edit?pli=1&resourcekey=0-IQ7mBAzuiieUErnZRBAgFA" class="btn btn-bios">BIOS Drive Pack<small>バイオスパック</small></a>
-            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases" class="btn btn-release">All Releases<small>すべてのリリース</small></a>
+            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn btn-emu">MAME4droid</a>
+            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn btn-emu">RetroArch</a>
+            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn btn-rom">Full MAME ROM</a>
+            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn btn-bios">File AP Fix (NDS)</a>
+            <a href="https://docs.google.com/file/d/0B7iKq77iChmyLXRtcUhvTmVhd28/edit?pli=1&resourcekey=0-IQ7mBAzuiieUErnZRBAgFA" class="btn btn-bios">Hệ thống BIOS (Drive)</a>
         </div>
     </div>
 
     <div class="footer">
-        <p>© 2026 Thuanhacker989 | Nguồn: GitHub, Romsfun, Archive, NSWPedia</p>
-        <p>Giao diện tối ưu cho Bio Link & Mobile | モバイル向けに最適化済み</p>
+        <p>© 2026 Thuanhacker989 | 楽しんでプレイしてください (Chúc bạn chơi game vui vẻ)</p>
+        <p style="font-size: 0.8em; opacity: 0.7;">Resources: GitHub, Romsfun, Archive, Emu-Land</p>
     </div>
 </div>
 
