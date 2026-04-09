@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trạm Giả Lập & CFW | エミュレータ</title>
+    <title>Trạm Giả Lập | エミュレータ</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #f8fafc; padding: 15px; }
-        .container { max-width: 800px; margin: auto; }
-        h1 { text-align: center; color: #38bdf8; font-size: 1.5em; }
-        .jp { display: block; font-size: 0.6em; color: #94a3b8; }
-        .card { background: #1e293b; border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid #334155; }
-        h2 { font-size: 1.1em; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; }
-        .group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .btn { flex: 1; min-width: 130px; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.8em; font-weight: 600; color: #fff; transition: 0.2s; }
-        .btn-emu { background: #0369a1; } .btn-rom { background: #15803d; } .btn-bios { background: #7e22ce; } .btn-ios { background: #475569; }
+        .container { max-width: 700px; margin: auto; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 5px; }
+        .sub { text-align: center; color: #94a3b8; font-size: 0.85em; margin-bottom: 20px; }
+        .card { background: #1e293b; border-radius: 10px; padding: 15px; margin-bottom: 15px; border-left: 5px solid #334155; }
+        .sony { border-left-color: #003791; }
+        .nin { border-left-color: #e60012; }
+        h2 { font-size: 1.1em; margin-top: 0; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 5px; }
+        .jp { font-size: 0.75em; color: #94a3b8; display: block; font-weight: normal; }
+        .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
+        .btn { padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.8em; font-weight: bold; text-align: center; color: #fff; transition: 0.2s; }
+        .emu { background: #0369a1; } .rom { background: #15803d; } .bios { background: #7e22ce; } .ios { background: #475569; }
         .btn:hover { opacity: 0.8; transform: scale(1.02); }
         .counter { text-align: center; margin-top: 20px; padding: 10px; background: #1e293b; border-radius: 8px; border: 1px dashed #fbbf24; }
     </style>
@@ -21,60 +24,58 @@
 <body>
 
 <div class="container">
-    <h1>🎮 TRẠM GIẢ LẬP & CFW <span class="jp">エミュレータ＆カスタムファームウェア</span></h1>
+    <h1>🎮 TRẠM GIẢ LẬP</h1>
+    <div class="sub">Dự án: Tổng hợp game tuổi thơ (by Thuanhacker989)<br>エミュレータ・ステーション</div>
 
     <!-- SONY SECTION -->
-    <div class="card">
-        <h2>🟦 SONY (PS1, PS2, PSP) <span class="jp">ソニー・プレイステーション</span></h2>
-        <div class="group">
-            <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn btn-emu">NetherSX2 (PS2)</a>
-            <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn btn-emu">PPSSPP Gold (PSP)</a>
-            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn btn-emu">DuckStation (PS1)</a>
-            <a href="https://apps.apple.com/vn/app/gamma-ps-1-game-emulator/id6499106870" class="btn btn-ios">Gamma iOS (PS1)</a>
-            <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn btn-ios">PPSSPP iOS (PSP)</a>
-            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn btn-bios">BIOS PS2</a>
-            <a href="https://www.emu-land.net/en/consoles/psx/bios" class="btn btn-bios">BIOS PS1</a>
-            <a href="https://romsfun.com/roms/playstation-2/" class="btn btn-rom">Kho ROM PS2</a>
-            <a href="https://romsfun.com/roms/playstation-portable/" class="btn btn-rom">Kho ROM PSP</a>
+    <div class="card sony">
+        <h2>Sony PlayStation <span class="jp">ソニー・プレイステーション</span></h2>
+        <div class="links">
+            <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn emu">NetherSX2 (PS2)</a>
+            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn emu">DuckStation (PS1)</a>
+            <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn emu">PPSSPP Gold</a>
+            <a href="https://apps.apple.com/vn/app/gamma-ps-1-game-emulator/id6499106870" class="btn ios">Gamma (iOS PS1)</a>
+            <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn ios">PPSSPP (iOS)</a>
+            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn bios">BIOS PS2</a>
+            <a href="https://www.emu-land.net/en/consoles/psx/bios" class="btn bios">BIOS PS1</a>
+            <a href="https://romsfun.com/roms/playstation-2/" class="btn rom">ROM PS2</a>
+            <a href="https://romsfun.com/roms/playstation-portable/" class="btn rom">ROM PSP</a>
         </div>
     </div>
 
     <!-- NINTENDO SECTION -->
-    <div class="card">
-        <h2>🟥 NINTENDO (Switch, 3DS, DS, NES) <span class="jp">任天堂</span></h2>
-        <div class="group">
-            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn btn-emu">Dolphin (GC/Wii)</a>
-            <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn btn-emu">Citra MMJ (3DS)</a>
-            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn btn-emu">DraStic (DS)</a>
-            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn btn-emu">Nestopia (NES)</a>
-            <a href="https://apps.apple.com/vn/app/manic-emu-gi%E1%BA%A3-l%E1%BA%ADp-game/id6743335790" class="btn btn-ios">Manic iOS (Multi)</a>
-            <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn btn-rom">ROM 3DS</a>
-            <a href="https://romsfun.com/roms/super-nintendo/" class="btn btn-rom">ROM NES/SNES</a>
-            <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn btn-rom">ROM Switch</a>
-            <a href="https://romsfun.com/roms/gamecube/" class="btn btn-rom">ROM GameCube</a>
+    <div class="card nin">
+        <h2>Nintendo <span class="jp">任天堂 (スイッチ, 3DS, NES)</span></h2>
+        <div class="links">
+            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn emu">Dolphin (GC)</a>
+            <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn emu">Citra (3DS)</a>
+            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn emu">DraStic (DS)</a>
+            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn emu">Nestopia (NES)</a>
+            <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn rom">ROM 3DS</a>
+            <a href="https://romsfun.com/roms/super-nintendo/" class="btn rom">ROM NES</a>
+            <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn rom">ROM Switch</a>
+            <a href="https://romsfun.com/roms/gamecube/" class="btn rom">ROM GC</a>
         </div>
     </div>
 
-    <!-- ARCADE & SYSTEM -->
+    <!-- OTHERS -->
     <div class="card">
-        <h2>📟 ARCADE & RETRO <span class="jp">アーケード＆レトロ</span></h2>
-        <div class="group">
-            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn btn-emu">MAME4droid</a>
-            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn btn-emu">RetroArch</a>
-            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn btn-rom">Full ROM MAME</a>
-            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn btn-bios">Fix AP (NDS)</a>
+        <h2>System & Arcade <span class="jp">アーケードとシステム</span></h2>
+        <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn emu">MAME4droid</a>
+            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn emu">RetroArch</a>
+            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn rom">MAME Roms</a>
+            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn bios">NDS AP Fix</a>
         </div>
     </div>
 
-    <!-- COUNTER SECTION -->
+    <!-- COUNTER -->
     <div class="counter">
-        <p style="margin:0; font-size: 0.85em; color: #fbbf24;">📊 LƯỢT TRUY CẬP | 訪問者数</p>
-        <img src="https://count.getloli.com/get/@Thuanhacker989?theme=rule34" alt="Visitor Counter" />
+        <span class="jp" style="color:#fbbf24">Visitor Count / 訪問者数:</span>
+        <img src="https://count.getloli.com/get/@Thuanhacker989?theme=rule34" alt="Counter" />
     </div>
 
-    <div style="text-align: center; font-size: 0.7em; color: #64748b; margin-top: 30px;">
-        © 2026 Thuanhacker989 | Enjoy Gaming!
-    </div>
+    <div class="sub" style="margin-top:20px">© 2026 Thuanhacker989</div>
 </div>
 
 </body>
