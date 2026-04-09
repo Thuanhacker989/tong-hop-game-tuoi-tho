@@ -5,43 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trạm Giả Lập & CFW | エミュステーション</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --sony: #003791; --nintendo: #e60012; --gold: #fbbf24; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #f8fafc; padding: 15px; margin: 0; }
-        .container { max-width: 600px; margin: auto; }
-        h1 { text-align: center; color: #38bdf8; font-size: 1.5rem; margin-bottom: 5px; }
-        .jp-title { display: block; font-size: 0.8rem; color: #94a3b8; text-align: center; margin-bottom: 20px; }
-        
-        /* Visitor Counter Styling */
-        .counter-box { position: relative; width: 100%; max-width: 400px; margin: 0 auto 20px; border-radius: 10px; overflow: hidden; background: #111; border: 1px solid #334155; }
-        .counter-box img { width: 100%; height: auto; display: block; object-fit: contain; }
-
-        .card { background: var(--card); border-radius: 12px; padding: 15px; margin-bottom: 15px; border: 1px solid #334155; }
-        h2 { font-size: 1.1rem; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; display: flex; justify-content: space-between; align-items: center; }
-        .jp-sub { font-size: 0.7rem; color: #64748b; font-weight: normal; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
-        .btn { text-align: center; padding: 10px 5px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: 600; font-size: 0.75rem; transition: 0.2s; background: #334155; }
-        .btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
-        .b-sony { background: var(--sony); } .b-nin { background: var(--nintendo); } 
-        .b-rom { background: #15803d; } .b-cfw { background: #92400e; border: 1px solid var(--gold); }
-        
-        .footer { text-align: center; margin-top: 30px; padding: 15px; font-size: 0.8rem; color: #64748b; border-top: 1px solid #334155; }
+        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 15px; font-size: 14px; }
+        .container { max-width: 700px; margin: auto; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 5px; }
+        .card { background: #1e293b; border-radius: 10px; padding: 15px; margin-bottom: 15px; border: 1px solid #334155; }
+        h2 { font-size: 1.1em; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 5px; margin-top: 0; }
+        .jp { font-size: 0.8em; color: #94a3b8; display: block; font-weight: normal; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 10px; }
+        .btn { text-align: center; padding: 10px 5px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.8em; transition: 0.2s; background: #334155; }
+        .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
+        .b-sony { background: #003791; } .b-nin { background: #e60012; } .b-rom { background: #15803d; } .b-cfw { background: #92400e; }
+        /* Căn chỉnh bộ đếm vừa khung */
+        .counter-box { text-align: center; background: #111; padding: 10px; border-radius: 10px; border: 2px solid #334155; margin-bottom: 15px; overflow: hidden; }
+        .counter-box img { max-width: 100%; height: auto; display: block; margin: 5px auto; }
+        .footer { text-align: center; font-size: 0.8em; color: #64748b; margin-top: 20px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>🎮 TRẠM GIẢ LẬP & CFW</h1>
-    <span class="jp-title">エミュレータ & カスタムファームウェア</span>
+    <p style="text-align:center; color:#94a3b8; margin-top:-5px;">エミュレータ＆カスタムファームウェア</p>
 
-    <!-- Bộ đếm lượt truy cập Booru-vp -->
+    <!-- Bộ đếm Booru-vp vừa khung -->
     <div class="counter-box">
-        <img src="https://count.getloli.com/get/@Thuanhacker989?theme=booru-vp" alt="Visitor Count">
+        <span style="font-family: monospace; color: #aaa; font-size: 12px;">VISITOR COUNT</span>
+        <img src="https://count.getloli.com/get/@Thuan_Nguyen?theme=booru-vp" alt="Visitor Counter">
     </div>
 
-    <!-- SONY SECTION -->
-    <div class="card" style="border-left: 4px solid var(--sony);">
-        <h2>🟦 SONY <span class="jp-sub">プレイステーション</span></h2>
+    <!-- BOX SONY -->
+    <div class="card">
+        <h2 class="b-sony-text">🟦 SONY PLAYSTATION <span class="jp">ソニー・プレイステーション</span></h2>
         <div class="grid">
             <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn b-sony">NetherSX2 (PS2)</a>
             <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn b-sony">DuckStation (PS1)</a>
@@ -54,35 +48,35 @@
         </div>
     </div>
 
-    <!-- NINTENDO SECTION -->
-    <div class="card" style="border-left: 4px solid var(--nintendo);">
-        <h2>🟥 NINTENDO <span class="jp-sub">任天堂 (ニンテンドー)</span></h2>
+    <!-- BOX NINTENDO -->
+    <div class="card">
+        <h2 class="b-nin-text">🟥 NINTENDO <span class="jp">任天堂 (ニンテンドー)</span></h2>
         <div class="grid">
             <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn b-nin">Citra MMJ (3DS)</a>
             <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn b-nin">DraStic (DS)</a>
             <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn b-nin">Dolphin (GC)</a>
             <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn b-nin">Nestopia (NES)</a>
+            <a href="https://docs.google.com/file/d/0B7iKq77iChmyLXRtcUhvTmVhd28/edit?pli=1&resourcekey=0-IQ7mBAzuiieUErnZRBAgFA" class="btn b-rom">ROM NES (Docs)</a>
+            <a href="https://romsfun.com/roms/super-nintendo/" class="btn b-rom">ROM SNES</a>
             <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn b-rom">ROM 3DS</a>
             <a href="https://romsfun.com/roms/gamecube/" class="btn b-rom">ROM GameCube</a>
-            <a href="https://romsfun.com/roms/nintendo/" class="btn b-rom">ROM NES (4 nút)</a>
-            <a href="https://romsfun.com/roms/super-nintendo/" class="btn b-rom">ROM SNES</a>
         </div>
     </div>
 
-    <!-- NINTENDO CFW SECTION -->
-    <div class="card" style="border-left: 4px solid var(--gold);">
-        <h2>🛠️ NINTENDO CFW <span class="jp-sub">カスタムファームウェア</span></h2>
+    <!-- BOX NINTENDO CFW -->
+    <div class="card">
+        <h2 class="b-cfw-text">🛠️ NINTENDO CFW <span class="jp">カスタムファームウェア</span></h2>
         <div class="grid">
             <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn b-cfw">Luma3DS</a>
             <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn b-cfw">Atmosphere</a>
-            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn b-cfw">3DS Release Tag</a>
+            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn b-cfw">3DS Release</a>
             <a href="https://archive.org/download/nds_apfix/apfix/" class="btn b-cfw">NDS AP Fix</a>
         </div>
     </div>
 
-    <!-- ARCADE & RETRO -->
+    <!-- BOX ARCADE & SYSTEM -->
     <div class="card">
-        <h2>📟 MAME & RETRO <span class="jp-sub">アーケード</span></h2>
+        <h2>📟 MAME & OTHERS <span class="jp">アーケード & その他</span></h2>
         <div class="grid">
             <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn">MAME4droid</a>
             <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn">RetroArch</a>
@@ -92,8 +86,8 @@
     </div>
 
     <div class="footer">
-        © 2026 by Nguyễn Đức Thuận | Thuanhacker989<br>
-        <span style="font-size: 0.7rem;">Giao diện tối ưu cho Bio Link & Mobile</span>
+        © 2026 by Nguyễn Đức Thuận<br>
+        <span style="font-size: 0.9em;">楽しんでプレイしてください (Chúc bạn chơi game vui vẻ)</span>
     </div>
 </div>
 
