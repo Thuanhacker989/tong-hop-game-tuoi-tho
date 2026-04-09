@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trạm Giả Lập & CFW | エミュステーション</title>
     <style>
-        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 15px; line-height: 1.4; }
+        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 15px; font-size: 14px; }
         .container { max-width: 650px; margin: auto; }
-        h1 { text-align: center; color: #38bdf8; margin-bottom: 2px; font-size: 1.5em; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 5px; }
         .jp { font-size: 0.75em; color: #94a3b8; display: block; font-weight: normal; }
-        .card { background: #1e293b; border-radius: 10px; padding: 12px; margin-bottom: 12px; border: 1px solid #334155; }
-        h2 { font-size: 1em; margin: 0 0 10px 0; padding-bottom: 5px; border-bottom: 1px solid #334155; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
-        .btn { text-align: center; padding: 8px 4px; border-radius: 5px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.75em; transition: 0.2s; background: #475569; }
+        .card { background: #1e293b; border-radius: 10px; padding: 15px; margin-bottom: 15px; border: 1px solid #334155; }
+        h2 { font-size: 1.1em; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 5px; margin-top: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 10px; }
+        .btn { text-align: center; padding: 10px 5px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.8em; transition: 0.2s; background: #334155; }
         .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
-        .sony { background: #003791; } .nin { background: #e60012; } .rom { background: #15803d; } .cfw { background: #b45309; }
-        .counter { text-align: center; background: #111; padding: 10px; border-radius: 8px; border: 2px solid #3f3f3f; margin-bottom: 15px; }
+        .sony { background: #003791; } .nin { background: #e60012; } .rom { background: #15803d; } .cfw { background: #92400e; }
+        .counter-box { text-align: center; background: #111; padding: 10px; border-radius: 8px; border: 2px solid #334155; margin-bottom: 15px; overflow: hidden; }
+        .counter-box img { max-width: 100%; height: auto; display: block; margin: 5px auto; image-rendering: pixelated; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🎮 TRẠM GIẢ LẬP</h1>
-    <p style="text-align:center; color:#94a3b8; margin: -5px 0 15px 0; font-size: 0.8em;">By Thuanhacker989 | ターナッカー989</p>
-
-    <!-- Minecraft Style Counter -->
-    <div class="counter">
-        <span style="font-family: monospace; color: #aaa; font-size: 0.7em;">VISITOR COUNT</span><br>
+    <h1>🎮 TRẠM GIẢ LẬP <span class="jp">エミュレータステーション</span></h1>
+    
+    <!-- Minecraft Counter (Adjusted Size) -->
+    <div class="counter-box">
+        <span style="font-family: monospace; color: #aaa; font-size: 10px;">VISITOR COUNT</span>
         <img src="https://count.getloli.com/get/@thuanhacker989_mc?theme=minecraft" alt="Counter">
     </div>
 
-    <!-- SONY BOX -->
+    <!-- SONY BOX (PS1, PS2, PSP) -->
     <div class="card">
         <h2 style="color: #60a5fa;">🟦 SONY PLAYSTATION <span class="jp">ソニー・プレイステーション</span></h2>
         <div class="grid">
@@ -39,13 +39,13 @@
             <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn sony">PPSSPP Gold (An)</a>
             <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn sony">PPSSPP (iOS)</a>
             <a href="https://apps.apple.com/vn/app/gamma-ps-1-game-emulator/id6499106870" class="btn sony">Gamma (iOS PS1)</a>
-            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn rom">BIOS PS2</a>
+            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn rom">BIOS PS2 All</a>
             <a href="https://romsfun.com/roms/playstation-2/" class="btn rom">ROM PS2</a>
             <a href="https://romsfun.com/roms/playstation-portable/" class="btn rom">ROM PSP</a>
         </div>
     </div>
 
-    <!-- NINTENDO BOX -->
+    <!-- NINTENDO EMULATION BOX -->
     <div class="card">
         <h2 style="color: #f87171;">🟥 NINTENDO <span class="jp">任天堂 (ニンテンドー)</span></h2>
         <div class="grid">
@@ -55,7 +55,7 @@
             <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn nin">Nestopia (NES)</a>
             <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn rom">ROM 3DS</a>
             <a href="https://romsfun.com/roms/gamecube/" class="btn rom">ROM GameCube</a>
-            <a href="https://romsfun.com/roms/super-nintendo/" class="btn rom">ROM SNES/NES</a>
+            <a href="https://romsfun.com/roms/super-nintendo/" class="btn rom">ROM NES/SNES</a>
             <a href="https://romsfun.com/roms/game-boy-advance/" class="btn rom">ROM GBA</a>
         </div>
     </div>
@@ -64,21 +64,21 @@
     <div class="card">
         <h2 style="color: #fbbf24;">🛠️ NINTENDO CFW <span class="jp">カスタムファームウェア</span></h2>
         <div class="grid">
-            <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn cfw">Luma3DS</a>
-            <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn cfw">Atmosphere</a>
+            <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn cfw">Luma3DS (3DS)</a>
+            <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn cfw">Atmosphere (SW)</a>
             <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn cfw">3DS Release Tag</a>
             <a href="https://archive.org/download/nds_apfix/apfix/" class="btn cfw">NDS AP Fix</a>
         </div>
     </div>
 
-    <!-- ARCADE & SYSTEM -->
+    <!-- ARCADE & OTHERS -->
     <div class="card">
-        <h2 style="color: #4ade80;">📟 MAME & SYSTEM <span class="jp">アーケード・システム</span></h2>
+        <h2 style="color: #4ade80;">📟 MAME & OTHERS <span class="jp">アーケード・その他</span></h2>
         <div class="grid">
             <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn">MAME4droid</a>
             <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn">RetroArch</a>
-            <a href="https://apps.apple.com/vn/app/manic-emu-gi%E1%BA%A3-l%E1%BA%ADp-game/id6743335790" class="btn">Manic Emu (iOS)</a>
-            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn rom">ROM MAME</a>
+            <a href="https://apps.apple.com/vn/app/manic-emu-gi%E1%BA%A3-l%E1%BA%ADp-game/id6743335790" class="btn">Manic (iOS)</a>
+            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn rom">Full ROM MAME</a>
         </div>
     </div>
 
