@@ -7,22 +7,15 @@
         body { font: 13px sans-serif; color: #fff; padding: 10px; background: url('background.jpg') no-repeat center/cover fixed; margin: 0; }
         .container { max-width: 600px; margin: auto; }
         h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.2em; font-weight: 900; text-shadow: 2px 2px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
-        
-        /* BOX TRONG SUỐT HOÀN TOÀN - CHỈ GIỮ VIỀN */
         .card { background: transparent; border-radius: 10px; padding: 12px; margin-bottom: 12px; border: 1.5px solid rgba(255,255,255,0.5); }
-        
-        /* TÔ ĐẬM CHỮ VÀ TẠO VIỀN CHỮ ĐỂ NỔI BẬT */
         h2 { font-size: 0.95em; font-weight: 900; margin: 0; text-transform: uppercase; text-shadow: 2px 2px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; }
         .jp { font-size: 0.7em; color: #eee; display: block; font-weight: bold; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 6px; margin-top: 8px; }
-        
         .btn { text-align: center; padding: 8px 3px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: 900; font-size: 0.75em; display: flex; align-items: center; justify-content: center; min-height: 35px; text-shadow: 1px 1px 2px #000; transition: 0.2s; border: 1px solid rgba(255,255,255,0.2); }
         .btn:hover { filter: brightness(1.2); transform: scale(1.05); }
-
         .b-sony { background: rgba(0, 55, 145, 0.7); } .b-nin { background: rgba(230, 0, 18, 0.7); } 
         .b-apple { background: rgba(71, 85, 105, 0.7); } .b-rom { background: rgba(21, 128, 61, 0.7); } 
         .b-cfw { background: rgba(146, 64, 14, 0.7); }
-
         .counter-box { text-align: center; margin-bottom: 10px; }
         .footer { text-align: center; font-size: 0.8em; font-weight: 900; color: #fff; margin-top: 15px; text-shadow: 1px 1px 3px #000; }
     </style>
@@ -50,7 +43,6 @@
             <a href="https://github.com/Vita3K/Vita3K/releases/download/continuous/android-latest.apk" class="btn b-sony">Vita3K</a>
             <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn b-rom">BIOS PS2</a>
             <a href="https://ps1emulator.com/SCPH1001.BIN" class="btn b-rom">BIOS PS1</a>
-            <a href="http://dus01.psv.update.playstation.net/update/psv/image/2022_0209/rel_f2c7b12fe85496ec88a0391b514d6e3b/PSVUPDAT.PUP" class="btn b-rom">Update PSV</a>
             <a href="https://romsfun.com/roms/playstation-2/" class="btn b-rom">ROM PS2</a>
             <a href="https://romsfun.com/roms/ps-vita/" class="btn b-rom">ROM PS Vita</a>
         </div>
@@ -60,13 +52,12 @@
         <h2 style="color:#f87171">🟥 Nintendo Systems <span class="jp">任天堂エミュレータ</span></h2>
         <div class="grid">
             <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn b-nin">Citra MMJ</a>
-            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn b-nin">DraStic (DS)</a>
-            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn b-nin">Dolphin</a>
-            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn b-nin">Nestopia</a>
+            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn b-nin">DraStic</a>
+            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn b-nin">Dolphin (Game cũ)</a>
+            <a href="https://romsfun.com/roms/nintendo-gamecube/" class="btn b-rom">ROM Game Cu Bi</a>
             <a href="https://romsfun.com/roms/nes/" class="btn b-rom">ROM NES</a>
             <a href="https://romsfun.com/roms/super-nintendo/" class="btn b-rom">ROM SNES</a>
             <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn b-rom">ROM 3DS</a>
-            <a href="https://romsfun.com/roms/game-boy-advance/" class="btn b-rom">ROM GBA</a>
             <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn b-rom">ROM Switch</a>
         </div>
     </div>
@@ -77,16 +68,6 @@
             <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn b-cfw">Luma3DS</a>
             <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn b-cfw">Atmosphere</a>
             <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn b-cfw">3DS Release</a>
-            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn b-cfw">NDS AP Fix</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2 style="color:#4ade80;">📟 Arcade & Retro <span class="jp">アーケード & レトロ</span></h2>
-        <div class="grid">
-            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn">MAME4droid</a>
-            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn">RetroArch</a>
-            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn b-rom">ROM MAME</a>
         </div>
     </div>
 
