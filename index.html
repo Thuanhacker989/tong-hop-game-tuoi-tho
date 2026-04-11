@@ -79,7 +79,28 @@
     <div class="footer">© 2026 Nguyễn Đức Thuận | 🎮 Chúc bạn có những giây phút ôn lại kỷ niệm tuyệt vời!</div>
 </div>
 
-<audio id="bgm" loop><source src="mario.mp3" type="audio/mpeg"></audio>
-<script>document.addEventListener('click',()=>document.getElementById("bgm").play().catch(e=>{}),{once:true});</script>
+<audio id="bgm" loop preload="auto">
+    <source src="mario.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const audio = document.getElementById("bgm");
+    const playAudio = () => {
+        audio.play().then(() => {
+            console.log("Nhạc đang phát thành công!");
+        }).catch(err => {
+            console.log("Trình duyệt chặn autoplay, cần click để phát.");
+        });
+    };
+
+    // Lắng nghe click hoặc chạm để phát nhạc
+    document.addEventListener('click', playAudio, {once: true});
+    document.addEventListener('touchstart', playAudio, {once: true});
+
+    // Ép load lại file nhạc để tránh cache cũ
+    window.addEventListener('load', () => {
+        audio.load();
+    });
+</script>
 </body>
 </html>
