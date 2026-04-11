@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trung Tâm Hỗ Trợ tìm game cổ điển & CFW</title>
     <style>
-        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 12px; font-size: 14px; }
+        body { 
+            font-family: sans-serif; 
+            color: #f8fafc; 
+            padding: 12px; 
+            font-size: 14px;
+            /* CÀI ĐẶT HÌNH NỀN KHÔNG LÀM MỜ */
+            background-image: url('760806.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Lớp phủ cực mỏng để hỗ trợ đọc chữ mà không mất chi tiết ảnh */
+            background-color: rgba(15, 23, 42, 0.4); 
+            background-blend-mode: overlay;
+        }
         .container { max-width: 650px; margin: auto; }
-        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.2em; line-height: 1.4; margin-bottom: 15px; }
-        .jp { font-size: 0.75em; color: #94a3b8; display: block; font-weight: normal; margin-top: 2px; }
-        .card { background: #1e293b; border-radius: 12px; padding: 15px; margin-bottom: 12px; border: 1px solid #334155; }
-        h2 { font-size: 1em; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; text-transform: uppercase; }
+        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.2em; line-height: 1.4; margin-bottom: 15px; text-shadow: 2px 2px 8px #000; }
+        .jp { font-size: 0.75em; color: #e2e8f0; display: block; font-weight: bold; margin-top: 2px; text-shadow: 1px 1px 2px #000; }
+        .card { background: rgba(30, 41, 59, 0.9); border-radius: 12px; padding: 15px; margin-bottom: 12px; border: 1px solid #334155; backdrop-filter: blur(2px); }
+        h2 { font-size: 1em; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; text-transform: uppercase; text-shadow: 1px 1px 2px #000; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
-        .btn { text-align: center; padding: 10px 5px; border-radius: 8px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.75em; transition: 0.2s; background: #334155; display: flex; align-items: center; justify-content: center; min-height: 35px; }
+        .btn { text-align: center; padding: 10px 5px; border-radius: 8px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.75em; transition: 0.2s; background: #334155; display: flex; align-items: center; justify-content: center; min-height: 35px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
         .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
         .b-sony { background: #003791; } .b-nin { background: #e60012; } .b-apple { background: #475569; } .b-rom { background: #15803d; } .b-cfw { background: #92400e; }
-        .counter-box { text-align: center; background: #000; padding: 10px; border-radius: 10px; border: 1px solid #334155; margin-bottom: 15px; }
+        .counter-box { text-align: center; background: rgba(0, 0, 0, 0.8); padding: 10px; border-radius: 10px; border: 1px solid #334155; margin-bottom: 15px; }
         .counter-box img { max-width: 100%; height: 40px; }
-        .footer { text-align: center; font-size: 0.8em; color: #64748b; margin-top: 20px; padding-top: 10px; border-top: 1px solid #334155; }
+        .footer { text-align: center; font-size: 0.8em; color: #cbd5e1; margin-top: 20px; padding-top: 10px; border-top: 1px solid #334155; text-shadow: 1px 1px 2px #000; }
     </style>
 </head>
 <body>
@@ -28,7 +42,7 @@
     <div class="counter-box">
         <img src="https://count.getloli.com/get/@thuanhacker989?theme=booru-vp" alt="Visitor Count">
     </div>
-
+    
     <div class="card">
         <h2 style="color: #cbd5e1;">🍏 Apple (iPhone/iOS) <span class="jp">アップル・アイフォン</span></h2>
         <div class="grid">
@@ -92,6 +106,20 @@
         <span style="font-size: 0.8em;">Dự án tổng hợp game tuổi thơ</span>
     </div>
 </div>
+
+<audio id="marioMusic" loop>
+    <source src="mario.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // Nhạc sẽ phát khi người dùng nhấn vào bất kỳ đâu trên trang web
+    document.addEventListener('click', function() {
+        var audio = document.getElementById("marioMusic");
+        audio.play().catch(function(error) {
+            console.log("Phát nhạc bị chặn: ", error);
+        });
+    }, { once: true });
+</script>
 
 </body>
 </html>
