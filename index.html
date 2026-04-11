@@ -85,26 +85,33 @@
     <div class="footer">© 2026 Nguyễn Đức Thuận | 🎮 Chúc bạn có những giây phút ôn lại kỷ niệm tuyệt vời!</div>
 </div>
 
-<audio id="bgm" loop preload="auto">
+<audio id="bgm" loop preload="auto" playsinline>
     <source src="mario.mp3" type="audio/mpeg">
 </audio>
 
 <script>
     const audio = document.getElementById("bgm");
 
-    // Hàm thực hiện phát nhạc lặp lại vô tận
-    const autoPlayMusic = () => {
+    // Hàm cố gắng phát nhạc liên tục cho đến khi thành công
+    function forcePlay() {
         audio.play().then(() => {
-            console.log("Nhạc đang chạy liên tục...");
-        }).catch(err => {
-            console.log("Chờ tương tác để kích hoạt âm thanh.");
+            console.log("Phát nhạc thành công!");
+            // Nếu phát được thì gỡ bỏ các sự kiện chờ
+            ["click", "touchstart", "scroll", "mousemove"].forEach(ev => 
+                document.removeEventListener(ev, forcePlay)
+            );
+        }).catch(() => {
+            console.log("Trình duyệt vẫn chặn...");
         });
-    };
+    }
 
-    // Chỉ cần người dùng chạm vào bất cứ đâu (màn hình, nút, ảnh), nhạc sẽ tự nổ
-    document.addEventListener('click', autoPlayMusic, {once: true});
-    document.addEventListener('touchstart', autoPlayMusic, {once: true});
-    document.addEventListener('scroll', autoPlayMusic, {once: true});
+    // Tự động chạy ngay khi load trang
+    window.onload = forcePlay;
+
+    // Lắng nghe mọi hành động nhỏ nhất của người dùng để "kích nổ" nhạc
+    ["click", "touchstart", "scroll", "mousemove"].forEach(ev => 
+        document.addEventListener(ev, forcePlay)
+    );
 </script>
 </body>
 </html>
