@@ -95,16 +95,19 @@
     function forcePlay() {
         audio.play().then(() => {
             console.log("Phát nhạc thành công!");
+            // Sau khi phát được thì xóa các sự kiện lắng nghe để tránh chạy lại không cần thiết
             ["click", "touchstart", "scroll", "mousemove"].forEach(ev => 
                 document.removeEventListener(ev, forcePlay)
             );
         }).catch(() => {
-            console.log("Trình duyệt vẫn chặn...");
+            console.log("Đang đợi hành động từ người dùng để phát nhạc...");
         });
     }
 
+    // Chạy ngay khi cửa sổ load xong
     window.onload = forcePlay;
 
+    // Kích nổ nhạc ngay khi có bất kỳ cử động nào
     ["click", "touchstart", "scroll", "mousemove"].forEach(ev => 
         document.addEventListener(ev, forcePlay)
     );
