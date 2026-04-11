@@ -3,89 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trung Tâm Hỗ Trợ Game, Giả Lập & Phần Mềm Tùy Chỉnh</title>
+    <title>Trung Tâm Hỗ Trợ tìm game cổ điển & CFW</title>
     <style>
         body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 15px; font-size: 14px; }
         .container { max-width: 650px; margin: auto; }
-        h1 { text-align: center; color: #38bdf8; margin-bottom: 8px; font-size: 1.5em; text-transform: uppercase; line-height: 1.3; }
-        .description { text-align: center; color: #94a3b8; font-size: 0.9em; margin-bottom: 20px; font-style: italic; line-height: 1.5; padding: 0 10px; }
-        .jp-title { font-size: 0.75em; color: #64748b; display: block; font-weight: normal; margin-top: 5px; }
-        .card { background: #1e293b; border-radius: 12px; padding: 15px; margin-bottom: 15px; border: 1px solid #334155; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.3em; line-height: 1.4; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #94a3b8; font-size: 0.85em; margin-bottom: 20px; display: block; }
+        .jp { font-size: 0.75em; color: #94a3b8; display: block; font-weight: normal; margin-top: 2px; }
+        .card { background: #1e293b; border-radius: 12px; padding: 15px; margin-bottom: 15px; border: 1px solid #334155; }
         h2 { font-size: 1.1em; color: #f43f5e; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 10px; margin-top: 10px; }
-        .btn { text-align: center; padding: 12px 5px; border-radius: 8px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.8em; transition: 0.3s; background: #334155; display: flex; align-items: center; justify-content: center; min-height: 40px; }
-        .btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
-        .b-sony { background: #003791; } .b-nin { background: #e60012; } .b-rom { background: #15803d; } .b-hack { background: #b45309; } .b-mame { background: #475569; }
-        .counter-container { text-align: center; background: #000; padding: 15px; border-radius: 10px; border: 1px solid #334155; margin-bottom: 20px; }
-        .counter-container img { max-width: 100%; height: auto; display: block; margin: auto; }
-        .footer { text-align: center; font-size: 0.8em; color: #64748b; margin-top: 30px; padding-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
+        .btn { text-align: center; padding: 10px 5px; border-radius: 8px; text-decoration: none; color: #fff; font-weight: bold; font-size: 0.75em; transition: 0.2s; background: #334155; display: flex; align-items: center; justify-content: center; min-height: 35px; }
+        .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
+        .b-sony { background: #003791; } .b-nin { background: #e60012; } .b-rom { background: #15803d; } .b-cfw { background: #92400e; }
+        .counter-box { text-align: center; background: #000; padding: 10px; border-radius: 10px; border: 1px solid #334155; margin-bottom: 20px; }
+        .counter-box img { max-width: 100%; height: 45px; object-fit: contain; }
+        .footer { text-align: center; font-size: 0.8em; color: #64748b; margin-top: 30px; border-top: 1px solid #334155; padding-top: 15px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Trung Tâm Hỗ Trợ Game, Giả Lập & Phần Mềm Tùy Chỉnh</h1>
-    <p class="description">
-        Trang web này hỗ trợ anh em tìm các giả lập, các hệ máy game, các bản ROM game cần thiết để chơi lại hoặc là ôn lại những kỷ niệm xưa và cũng hỗ trợ anh em update phần mềm hack mới nhất.
-    </p>
-    <p style="text-align:center; color:#38bdf8; font-weight: bold; margin-top: -10px;">By Nguyễn Đức Thuận</p>
-
-    <!-- BOORU-VP COUNTER -->
-    <div class="counter-container">
-        <span style="font-size: 11px; color: #666; display: block; margin-bottom: 8px; font-family: monospace;">[ VISITOR TRACKER ]</span>
+    <h1>Trung Tâm Hỗ Trợ tìm game cổ điển và phần mềm CFW</h1>
+    <span class="subtitle">ゲームサポートセンター & カスタmファームウェア</span>
+    
+    <div class="counter-box">
         <img src="https://count.getloli.com/get/@thuanhacker989?theme=booru-vp" alt="Visitor Count">
     </div>
 
-    <!-- UPDATE HACK & CFW -->
     <div class="card">
-        <h2 style="color: #fbbf24;">🛠️ UPDATE HACK & CFW <span class="jp-title">最新ハックアップデート</span></h2>
+        <h2 style="color: #60a5fa;">🟦 SONY PLAYSTATION <span class="jp">プレイステーション</span></h2>
         <div class="grid">
-            <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn b-hack">Luma3DS (3DS)</a>
-            <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn b-hack">Atmosphere (SW)</a>
-            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn b-hack">Fix lỗi AP (NDS)</a>
-            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases" class="btn b-hack">GitHub Releases</a>
+            <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn b-sony">NetherSX2 (PS2)</a>
+            <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn b-sony">PPSSPP Gold (An)</a>
+            <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn b-sony">PPSSPP (iOS)</a>
+            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn b-sony">DuckStation (PS1)</a>
+            <a href="https://apps.apple.com/vn/app/gamma-ps-1-game-emulator/id6499106870" class="btn b-sony">Gamma (iOS)</a>
+            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn b-rom">BIOS PS2</a>
+            <a href="https://romsfun.com/roms/playstation-2/" class="btn b-rom">ROM PS2</a>
+            <a href="https://romsfun.com/roms/playstation-portable/" class="btn b-rom">ROM PSP</a>
         </div>
     </div>
 
-    <!-- NINTENDO EMULATION -->
     <div class="card">
-        <h2>🟥 NINTENDO SYSTEMS <span class="jp-title">任天堂エミュレータ</span></h2>
+        <h2 style="color: #f87171;">🟥 NINTENDO SYSTEMS <span class="jp">任天堂エミュレータ</span></h2>
         <div class="grid">
             <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn b-nin">Citra MMJ (3DS)</a>
             <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn b-nin">DraStic (DS)</a>
             <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn b-nin">Dolphin (GC)</a>
-            <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn b-rom">ROM 3DS</a>
+            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn b-nin">Nestopia (NES)</a>
             <a href="https://romsfun.com/roms/nes/" class="btn b-rom">ROM NES</a>
             <a href="https://romsfun.com/roms/super-nintendo/" class="btn b-rom">ROM SNES</a>
+            <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn b-rom">ROM 3DS</a>
             <a href="https://romsfun.com/roms/game-boy-advance/" class="btn b-rom">ROM GBA</a>
         </div>
     </div>
 
-    <!-- SONY PLAYSTATION -->
     <div class="card">
-        <h2 style="color: #60a5fa;">🟦 SONY PLAYSTATION <span class="jp-title">ソニー・プレイステーション</span></h2>
+        <h2 style="color: #fbbf24;">🛠️ NINTENDO CFW <span class="jp">カスタムファームウェア</span></h2>
         <div class="grid">
-            <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn b-sony">NetherSX2 (PS2)</a>
-            <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn b-sony">PPSSPP Gold</a>
-            <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn b-sony">PPSSPP (iOS)</a>
-            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn b-sony">DuckStation (PS1)</a>
-            <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn b-rom">BIOS All</a>
-            <a href="https://romsfun.com/roms/playstation-2/" class="btn b-rom">ROM PS2</a>
+            <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn b-cfw">Luma3DS (3DS)</a>
+            <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn b-cfw">Atmosphere (SW)</a>
+            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn b-cfw">3DS Release Tag</a>
+            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn b-cfw">NDS AP Fix</a>
         </div>
     </div>
 
-    <!-- ARCADE & RETRO -->
     <div class="card">
-        <h2 style="color: #4ade80;">📟 MAME & RETRO <span class="jp-title">アーケード & レトロ</span></h2>
+        <h2 style="color: #4ade80;">📟 ARCADE & SYSTEM <span class="jp">アーケード & システム</span></h2>
         <div class="grid">
-            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn b-mame">MAME4droid</a>
-            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn b-mame">RetroArch</a>
+            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn">MAME4droid</a>
+            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn">RetroArch</a>
+            <a href="https://apps.apple.com/vn/app/manic-emu-gi%E1%BA%A3-l%E1%BA%ADp-game/id6743335790" class="btn">Manic Emu (iOS)</a>
             <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn b-rom">ROM MAME</a>
         </div>
     </div>
 
     <div class="footer">
-        © 2026 Nguyễn Đức Thuận | 🎮 Chúc bạn ôn lại kỷ niệm tuyệt vời!
+        © by Nguyễn Đức Thuận | 2026<br>
+        <span style="font-size: 0.8em; color: #475569;">Dự án tổng hợp game tuổi thơ</span>
     </div>
 </div>
 
