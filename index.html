@@ -22,13 +22,6 @@
         .b-rom { background: rgba(21, 128, 61, 0.8); } .b-cfw { background: rgba(146, 64, 14, 0.8); } 
         .b-mame { background: rgba(71, 85, 105, 0.8); }
 
-        /* NÚT KÍCH HOẠT NHẠC CỰC MẠNH */
-        #music-trigger {
-            display: block; width: 200px; margin: 10px auto; padding: 8px;
-            background: rgba(255, 255, 255, 0.2); color: #fff; border: 1px solid #fff;
-            border-radius: 20px; cursor: pointer; font-weight: bold; text-align: center;
-        }
-
         .counter-container { text-align: center; margin-bottom: 20px; }
         .counter-container img { height: 35px; width: auto; }
         .footer { text-align: center; font-size: 0.9em; font-weight: 900; color: #fff; margin-top: 30px; text-shadow: 1px 1px 3px #000; padding-bottom: 20px; }
@@ -37,9 +30,6 @@
 <body>
 <div class="container">
     <h1>Trung Tâm Hỗ Trợ Game, Giả Lập & Phần Mềm Tùy Chỉnh</h1>
-    
-    <button id="music-trigger">🎵 Bật Nhạc Tuổi Thơ</button>
-
     <p class="description">Trang web này hỗ trợ anh em tìm các giả lập, các hệ máy game, các ROM game cần thiết.</p>
     <p style="text-align:center; color:#38bdf8; font-weight: 900; margin-top: -10px; text-shadow: 1px 1px 2px #000;">By Nguyễn Đức Thuận</p>
     
@@ -96,27 +86,25 @@
 </div>
 
 <audio id="bgm" loop preload="auto">
-    <source src="./mario.mp3" type="audio/mpeg">
+    <source src="mario.mp3" type="audio/mpeg">
 </audio>
 
 <script>
     const audio = document.getElementById("bgm");
-    const trigger = document.getElementById("music-trigger");
 
-    const startMusic = () => {
+    // Hàm thực hiện phát nhạc lặp lại vô tận
+    const autoPlayMusic = () => {
         audio.play().then(() => {
-            trigger.style.display = 'none'; // Nhạc chạy thì ẩn nút đi cho đẹp
+            console.log("Nhạc đang chạy liên tục...");
         }).catch(err => {
-            alert("Vẫn chưa tìm thấy file mario.mp3. Thuận kiểm tra lại tên file trên GitHub nhé!");
+            console.log("Chờ tương tác để kích hoạt âm thanh.");
         });
     };
 
-    // Cách 1: Tự kích hoạt khi bấm nút (Chắc chắn nhất)
-    trigger.addEventListener('click', startMusic);
-
-    // Cách 2: Tự kích hoạt khi chạm màn hình
-    document.addEventListener('touchstart', startMusic, {once: true});
-    document.addEventListener('click', startMusic, {once: true});
+    // Chỉ cần người dùng chạm vào bất cứ đâu (màn hình, nút, ảnh), nhạc sẽ tự nổ
+    document.addEventListener('click', autoPlayMusic, {once: true});
+    document.addEventListener('touchstart', autoPlayMusic, {once: true});
+    document.addEventListener('scroll', autoPlayMusic, {once: true});
 </script>
 </body>
 </html>
