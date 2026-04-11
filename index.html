@@ -4,60 +4,30 @@
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trung Tâm Hỗ Trợ Game, Giả Lập & Phần Mềm Tùy Chỉnh</title>
     <style>
-        /* Body giữ ảnh nền nét căng, không phủ màu */
-        body { 
-            font: 13px sans-serif; 
-            color: #fff; 
-            padding: 10px; 
-            background: url('background.jpg') no-repeat center/cover fixed; 
-            margin: 0; 
-        }
+        body { font: 13px sans-serif; color: #fff; padding: 10px; background: url('background.jpg') no-repeat center/cover fixed; margin: 0; }
         .container { max-width: 650px; margin: auto; }
+        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.4em; font-weight: 900; text-shadow: 2px 2px 4px #000; margin-bottom: 5px; }
+        .description { text-align: center; color: #eee; font-size: 0.95em; font-weight: bold; font-style: italic; text-shadow: 1px 1px 3px #000; margin-bottom: 15px; padding: 0 10px; }
         
-        /* Đổ bóng cho chữ để đọc rõ trên nền ảnh nét */
-        h1 { 
-            text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.4em; font-weight: 900; 
-            text-shadow: 2px 2px 4px #000; margin-bottom: 5px; 
-        }
-        .description { 
-            text-align: center; color: #eee; font-size: 0.95em; font-weight: bold; font-style: italic; 
-            text-shadow: 1px 1px 3px #000; margin-bottom: 15px; padding: 0 10px; 
-        }
-
-        /* BOX TRONG SUỐT 100% - Chỉ giữ lại viền */
-        .card { 
-            background: transparent; /* Xóa hoàn toàn màu nền của box */
-            border-radius: 12px; 
-            padding: 15px; 
-            margin-bottom: 20px; 
-            border: 2px solid rgba(255,255,255,0.6); /* Giữ viền trắng trong để phân khu */
-            backdrop-filter: none; /* Đảm bảo không làm mờ ảnh nền */
-        }
-
-        h2 { 
-            font-size: 1.1em; font-weight: 900; margin: 0; text-transform: uppercase; 
-            text-shadow: 2px 2px 2px #000; border-bottom: 1px solid rgba(255,255,255,0.4); 
-            padding-bottom: 8px; 
-        }
+        /* BOX TRONG SUỐT TUYỆT ĐỐI 100% */
+        .card { background: transparent; border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 2px solid rgba(255,255,255,0.6); }
+        
+        h2 { font-size: 1.1em; font-weight: 900; margin: 0; text-transform: uppercase; text-shadow: 2px 2px 2px #000; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 8px; }
         .jp-title { font-size: 0.7em; color: #ddd; display: block; font-weight: bold; margin-top: 2px; }
-        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 10px; margin-top: 15px; }
         
-        /* NÚT GIỮ NGUYÊN PHONG CÁCH CŨ */
-        .btn { 
-            text-align: center; padding: 10px 5px; border-radius: 8px; text-decoration: none; 
-            color: #fff; font-weight: 900; font-size: 0.8em; display: flex; align-items: center; 
-            justify-content: center; min-height: 40px; text-shadow: 1px 1px 2px #000; 
-            border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; 
-        }
+        .btn { text-align: center; padding: 10px 5px; border-radius: 8px; text-decoration: none; color: #fff; font-weight: 900; font-size: 0.8em; display: flex; align-items: center; justify-content: center; min-height: 40px; text-shadow: 1px 1px 2px #000; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
         .btn:hover { filter: brightness(1.3); transform: translateY(-2px); border-color: #fff; }
-        
-        /* Màu các nút bấm */
-        .b-sony { background: rgba(0, 55, 145, 0.8); } 
-        .b-nin { background: rgba(230, 0, 18, 0.8); } 
-        .b-rom { background: rgba(21, 128, 61, 0.8); } 
-        .b-cfw { background: rgba(146, 64, 14, 0.8); } 
+        .b-sony { background: rgba(0, 55, 145, 0.8); } .b-nin { background: rgba(230, 0, 18, 0.8); } 
+        .b-rom { background: rgba(21, 128, 61, 0.8); } .b-cfw { background: rgba(146, 64, 14, 0.8); } 
         .b-mame { background: rgba(71, 85, 105, 0.8); }
+
+        /* NÚT KÍCH HOẠT NHẠC CỰC MẠNH */
+        #music-trigger {
+            display: block; width: 200px; margin: 10px auto; padding: 8px;
+            background: rgba(255, 255, 255, 0.2); color: #fff; border: 1px solid #fff;
+            border-radius: 20px; cursor: pointer; font-weight: bold; text-align: center;
+        }
 
         .counter-container { text-align: center; margin-bottom: 20px; }
         .counter-container img { height: 35px; width: auto; }
@@ -67,8 +37,12 @@
 <body>
 <div class="container">
     <h1>Trung Tâm Hỗ Trợ Game, Giả Lập & Phần Mềm Tùy Chỉnh</h1>
-    <p class="description">Trang web này hỗ trợ anh em tìm các giả lập, các hệ máy game, các ROM game cần thiết để chơi lại hoặc là ôn lại những kỉ niệm ngày xưa.</p>
+    
+    <button id="music-trigger">🎵 Bật Nhạc Tuổi Thơ</button>
+
+    <p class="description">Trang web này hỗ trợ anh em tìm các giả lập, các hệ máy game, các ROM game cần thiết.</p>
     <p style="text-align:center; color:#38bdf8; font-weight: 900; margin-top: -10px; text-shadow: 1px 1px 2px #000;">By Nguyễn Đức Thuận</p>
+    
     <div class="counter-container"><img src="https://count.getloli.com/get/@thuanhacker989?theme=booru-vp" alt="Visitor Count"></div>
 
     <div class="card">
@@ -122,16 +96,27 @@
 </div>
 
 <audio id="bgm" loop preload="auto">
-    <source src="mario.mp3" type="audio/mpeg">
+    <source src="./mario.mp3" type="audio/mpeg">
 </audio>
 
 <script>
     const audio = document.getElementById("bgm");
-    const playAudio = () => {
-        audio.play().catch(e => console.log("Cần click để phát nhạc"));
+    const trigger = document.getElementById("music-trigger");
+
+    const startMusic = () => {
+        audio.play().then(() => {
+            trigger.style.display = 'none'; // Nhạc chạy thì ẩn nút đi cho đẹp
+        }).catch(err => {
+            alert("Vẫn chưa tìm thấy file mario.mp3. Thuận kiểm tra lại tên file trên GitHub nhé!");
+        });
     };
-    document.addEventListener('click', playAudio, {once: true});
-    document.addEventListener('touchstart', playAudio, {once: true});
+
+    // Cách 1: Tự kích hoạt khi bấm nút (Chắc chắn nhất)
+    trigger.addEventListener('click', startMusic);
+
+    // Cách 2: Tự kích hoạt khi chạm màn hình
+    document.addEventListener('touchstart', startMusic, {once: true});
+    document.addEventListener('click', startMusic, {once: true});
 </script>
 </body>
 </html>
