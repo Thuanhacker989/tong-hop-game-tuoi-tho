@@ -10,13 +10,13 @@
             color: #f8fafc; 
             padding: 12px; 
             font-size: 14px;
-            /* CÀI ĐẶT HÌNH NỀN KHÔNG LÀM MỜ */
-            background-image: url('760806.jpg'); 
+            /* HÌNH NỀN GỐC - KHÔNG LÀM MỜ */
+            background-image: url('background.jpg'); 
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            /* Lớp phủ cực mỏng để hỗ trợ đọc chữ mà không mất chi tiết ảnh */
+            /* Lớp phủ mỏng để giữ độ nét cho ảnh nền Mario Party */
             background-color: rgba(15, 23, 42, 0.4); 
             background-blend-mode: overlay;
         }
@@ -42,7 +42,7 @@
     <div class="counter-box">
         <img src="https://count.getloli.com/get/@thuanhacker989?theme=booru-vp" alt="Visitor Count">
     </div>
-    
+
     <div class="card">
         <h2 style="color: #cbd5e1;">🍏 Apple (iPhone/iOS) <span class="jp">アップル・アイフォン</span></h2>
         <div class="grid">
@@ -112,12 +112,9 @@
 </audio>
 
 <script>
-    // Nhạc sẽ phát khi người dùng nhấn vào bất kỳ đâu trên trang web
     document.addEventListener('click', function() {
         var audio = document.getElementById("marioMusic");
-        audio.play().catch(function(error) {
-            console.log("Phát nhạc bị chặn: ", error);
-        });
+        audio.play().catch(function(e) { /* Sẽ không báo lỗi nếu chưa có file */ });
     }, { once: true });
 </script>
 
