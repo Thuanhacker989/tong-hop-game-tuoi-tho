@@ -6,78 +6,91 @@
     <style>
         body { font: 13px sans-serif; color: #fff; padding: 10px; background: url('background.jpg') no-repeat center/cover fixed; margin: 0; }
         .container { max-width: 600px; margin: auto; }
-        /* Chữ tiêu đề chính đậm và đổ bóng mạnh */
-        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.2em; font-weight: 900; text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+        h1 { text-align: center; color: #38bdf8; text-transform: uppercase; font-size: 1.2em; font-weight: 900; text-shadow: 2px 2px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
         
         /* BOX TRONG SUỐT HOÀN TOÀN - CHỈ GIỮ VIỀN */
-        .card { background: transparent; border-radius: 10px; padding: 12px; margin-bottom: 15px; border: 2px solid rgba(255,255,255,0.4); }
+        .card { background: transparent; border-radius: 10px; padding: 12px; margin-bottom: 12px; border: 1.5px solid rgba(255,255,255,0.5); }
         
-        /* Chữ tiêu đề Box tô đậm và viền đen để không bị lẫn vào ảnh nền */
-        h2 { font-size: 1em; font-weight: 900; margin: 0; text-transform: uppercase; color: #fff; text-shadow: 2px 2px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; }
+        /* TÔ ĐẬM CHỮ VÀ TẠO VIỀN CHỮ ĐỂ NỔI BẬT */
+        h2 { font-size: 0.95em; font-weight: 900; margin: 0; text-transform: uppercase; text-shadow: 2px 2px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; }
         .jp { font-size: 0.7em; color: #eee; display: block; font-weight: bold; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-top: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 6px; margin-top: 8px; }
         
-        /* Nút bấm cũng làm trong suốt nhẹ để thấy nền */
-        .btn { text-align: center; padding: 8px 3px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: 900; font-size: 0.75em; display: flex; align-items: center; justify-content: center; min-height: 35px; border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 2px #000; transition: 0.2s; }
-        .btn:hover { filter: brightness(1.2); transform: scale(1.05); border-color: #fff; }
+        .btn { text-align: center; padding: 8px 3px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: 900; font-size: 0.75em; display: flex; align-items: center; justify-content: center; min-height: 35px; text-shadow: 1px 1px 2px #000; transition: 0.2s; border: 1px solid rgba(255,255,255,0.2); }
+        .btn:hover { filter: brightness(1.2); transform: scale(1.05); }
 
-        /* Màu sắc đặc trưng cho viền và chữ trên nút */
-        .b-sony { background: rgba(0, 55, 145, 0.7); } 
-        .b-nin { background: rgba(230, 0, 18, 0.7); } 
-        .b-apple { background: rgba(71, 85, 105, 0.7); } 
-        .b-rom { background: rgba(21, 128, 61, 0.7); } 
+        .b-sony { background: rgba(0, 55, 145, 0.7); } .b-nin { background: rgba(230, 0, 18, 0.7); } 
+        .b-apple { background: rgba(71, 85, 105, 0.7); } .b-rom { background: rgba(21, 128, 61, 0.7); } 
         .b-cfw { background: rgba(146, 64, 14, 0.7); }
 
-        .counter-box { text-align: center; margin-bottom: 15px; }
-        .footer { text-align: center; font-size: 0.8em; font-weight: bold; color: #fff; margin-top: 20px; text-shadow: 1px 1px 3px #000; }
+        .counter-box { text-align: center; margin-bottom: 10px; }
+        .footer { text-align: center; font-size: 0.8em; font-weight: 900; color: #fff; margin-top: 15px; text-shadow: 1px 1px 3px #000; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>Hỗ Trợ Game Cổ Điển & CFW</h1>
-    <div class="counter-box"><img src="https://count.getloli.com/get/@thuanhacker989?theme=booru-vp" height="40"></div>
+    <div class="counter-box"><img src="https://count.getloli.com/get/@thuanhacker989?theme=booru-vp" height="35"></div>
 
     <div class="card">
-        <h2 style="color:#cbd5e1">🍏 Apple <span class="jp">アップル</span></h2>
+        <h2 style="color:#cbd5e1">🍏 Apple (iPhone/iOS) <span class="jp">アップル・アイフォン</span></h2>
         <div class="grid">
-            <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn b-apple">PPSSPP</a>
-            <a href="https://apps.apple.com/vn/app/gamma-ps-1-game-emulator/id6499106870" class="btn b-apple">Gamma</a>
-            <a href="https://apps.apple.com/vn/app/manic-emu-gi%E1%BA%A3-l%E1%BA%ADp-game/id6743335790" class="btn b-apple">Manic</a>
+            <a href="https://apps.apple.com/us/app/ppsspp-psp-emulator/id6496972903" class="btn b-apple">PPSSPP (PSP)</a>
+            <a href="https://apps.apple.com/vn/app/gamma-ps-1-game-emulator/id6499106870" class="btn b-apple">Gamma (PS1)</a>
+            <a href="https://apps.apple.com/vn/app/manic-emu-gi%E1%BA%A3-l%E1%BA%ADp-game/id6743335790" class="btn b-apple">Manic Emu</a>
         </div>
     </div>
 
     <div class="card">
-        <h2 style="color:#60a5fa">🟦 Sony <span class="jp">ソニー</span></h2>
+        <h2 style="color:#60a5fa">🟦 Sony PlayStation <span class="jp">ソニー・プレイステーション</span></h2>
         <div class="grid">
             <a href="https://github.com/Trixarian/NetherSX2-classic/releases/download/2.2n/NetherSX2-v2.2n-3668.apk" class="btn b-sony">NetherSX2</a>
             <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="btn b-sony">PPSSPP Gold</a>
+            <a href="https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation" class="btn b-sony">DuckStation</a>
             <a href="https://github.com/Vita3K/Vita3K/releases/download/continuous/android-latest.apk" class="btn b-sony">Vita3K</a>
             <a href="https://file.ps2biosonline.com/ps2-bios-all-bios.zip" class="btn b-rom">BIOS PS2</a>
+            <a href="https://ps1emulator.com/SCPH1001.BIN" class="btn b-rom">BIOS PS1</a>
+            <a href="http://dus01.psv.update.playstation.net/update/psv/image/2022_0209/rel_f2c7b12fe85496ec88a0391b514d6e3b/PSVUPDAT.PUP" class="btn b-rom">Update PSV</a>
             <a href="https://romsfun.com/roms/playstation-2/" class="btn b-rom">ROM PS2</a>
+            <a href="https://romsfun.com/roms/ps-vita/" class="btn b-rom">ROM PS Vita</a>
         </div>
     </div>
 
     <div class="card">
-        <h2 style="color:#f87171">🟥 Nintendo <span class="jp">任天堂</span></h2>
+        <h2 style="color:#f87171">🟥 Nintendo Systems <span class="jp">任天堂エミュレータ</span></h2>
         <div class="grid">
             <a href="https://github.com/weihuoya/citra/releases/download/20251112/Citra_MMJ_20251112.apk" class="btn b-nin">Citra MMJ</a>
-            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn b-nin">DraStic</a>
+            <a href="https://github.com/R-YaTian/DraStic_rev_i18n/releases/download/rev251204/DraStic_r2.6.0.4a_build109_universal_rev251204.apk" class="btn b-nin">DraStic (DS)</a>
+            <a href="https://dl.dolphin-emu.org/releases/2603a/dolphin-2603a.apk" class="btn b-nin">Dolphin</a>
+            <a href="http://prdownloads.sourceforge.net/nestopia/Nestopia140bin.zip?download" class="btn b-nin">Nestopia</a>
+            <a href="https://romsfun.com/roms/nes/" class="btn b-rom">ROM NES</a>
+            <a href="https://romsfun.com/roms/super-nintendo/" class="btn b-rom">ROM SNES</a>
             <a href="https://romsfun.com/roms/nintendo-3ds/" class="btn b-rom">ROM 3DS</a>
-            <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn b-rom">ROM SW</a>
+            <a href="https://romsfun.com/roms/game-boy-advance/" class="btn b-rom">ROM GBA</a>
+            <a href="https://nswpedia.com/nintendo-switch-roms/page/4" class="btn b-rom">ROM Switch</a>
         </div>
     </div>
 
     <div class="card">
-        <h2 style="color:#fbbf24">🛠️ CFW <span class="jp">カスタム</span></h2>
+        <h2 style="color:#fbbf24">🛠️ Nintendo CFW <span class="jp">カスタムファームウェア</span></h2>
         <div class="grid">
             <a href="https://github.com/LumaTeam/Luma3DS/releases" class="btn b-cfw">Luma3DS</a>
             <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" class="btn b-cfw">Atmosphere</a>
-            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn b-cfw">3DS Tag</a>
+            <a href="https://github.com/Thuanhacker989/tong-hop-game-tuoi-tho/releases/tag/3DS" class="btn b-cfw">3DS Release</a>
+            <a href="https://archive.org/download/nds_apfix/apfix/" class="btn b-cfw">NDS AP Fix</a>
         </div>
     </div>
 
-    <div class="footer">© 2026 by Nguyễn Đức Thuận | Tổng hợp game tuổi thơ</div>
+    <div class="card">
+        <h2 style="color:#4ade80;">📟 Arcade & Retro <span class="jp">アーケード & レトロ</span></h2>
+        <div class="grid">
+            <a href="https://play.google.com/store/apps/details?id=com.seleuco.mame4droid" class="btn">MAME4droid</a>
+            <a href="https://buildbot.libretro.com/stable/1.22.2/android/RetroArch.apk" class="btn">RetroArch</a>
+            <a href="https://archive.org/download/mame-0.272-romset-complete-merged/arcade/" class="btn b-rom">ROM MAME</a>
+        </div>
+    </div>
+
+    <div class="footer">© by Nguyễn Đức Thuận | 2026<br>Tổng hợp game tuổi thơ</div>
 </div>
 <audio id="m" loop><source src="mario.mp3" type="audio/mpeg"></audio>
 <script>document.addEventListener('click',()=>document.getElementById("m").play().catch(e=>{}),{once:true});</script>
